@@ -1,7 +1,4 @@
-//Vamos a hacer un programa para jugar a los chinos.
-El programa pide por prompt la configuración de las monedas que tienen escondidas cada jugador.
-Después pide por teclado que cada jugador adivine cuantas monedas hay en total.
-Finalmente me dice quien ha ganado. Puede haber varios ganadores.
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +8,35 @@ Finalmente me dice quien ha ganado. Puede haber varios ganadores.
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        /*Vamos a hacer un programa para jugar a los chinos.
+El programa pide por prompt la configuración de las monedas que tienen escondidas cada jugador.
+Después pide por teclado que cada jugador adivine cuantas monedas hay en total.
+Finalmente me dice quien ha ganado. Puede haber varios ganadores.*/
+        let jugador1 = Number(prompt("escribe el numero de monedas que tienes"));
+        let jugador2 = Number(prompt("escribe el numero de monedas que tienes"));
+        let jugador3 = Number(prompt("escribe el numero de monedas que tienes"));
+        let jugador4 = Number(prompt("escribe el numero de monedas que tienes"));
+
+        let total = jugador1 + jugador2 + jugador3 + jugador4;
+
+        let j1dice = Number(prompt("Jugador 1 dice: "));
+        let j2dice = Number(prompt("Jugador 2 dice: "));
+        let j3dice = Number(prompt("Jugador 3 dice: "));
+        let j4dice = Number(prompt("Jugador 4 dice: "));
+
+        if (j1dice === total){
+            alert("Jugador 1 ha ganado");
+        }
+        if (j2dice === total){
+            alert("Jugador 2 ha ganado");
+        }
+        if (j3dice === total){
+            alert("Jugador 3 ha ganado");
+        }
+        if (j4dice === total){
+            alert("Jugador 4 ha ganado");
+        }
+    </script>
 </body>
 </html>
