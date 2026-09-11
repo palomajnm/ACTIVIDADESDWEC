@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/* En una frutería hay tres tipos de frutas, con diferente precio por kilo. 
+Tanto el precio por kilo, como el nombre de la fruta se piden al usuario mediante prompt. 
+Este usuario sería el empresario y luego tendremos al cliente.*/
+alert("Bienvenido a la mi fruteria");
+
+let fruta1=prompt("Nombre de la fruta 1: ");
+let fruta2=prompt("Nombre de la fruta 2: ");
+let fruta3=prompt("Nombre de la fruta 3: ");
+
+
+let precio1= Number(prompt("Precio de la fruta 1: "));
+let precio2= Number(prompt("Precio de la fruta 2: "));
+let precio3= Number(prompt("Precio de la fruta 3: "));
+
+alert("Disponemos de " + fruta1 + ", " + fruta2 + " y " + fruta3 + " a los siguientes precios: " + precio1 + "€, " + precio2 + "€, " + precio3 + "€");
+
+let pedirFruta=prompt("Qué fruta quieres???");
+let pedirCantidad= Number(prompt("Cuantos kilos quieres???"));
+
+//La cantidad disponible de cada fruta es una variable dentro del programa ( no se pregunta )
+let fruta1Cantidad=20;
+let fruta2Cantidad=40;
+let fruta3Cantidad=30;
+
+//Al iniciar se me muestran los tipos de frutas disponibles, la cantidad que hay actualmente y el precio por kilo.
+
+//Al cliente se le pregunta que fruta quiere y cuanta. 
+// Se muestra el total a cobrar. Si no hay suficiente fruta, se le dice que no se tiene suficiente y no se le cobra.
+
+if( (pedirFruta==fruta1) && (pedirCantidad<=fruta1Cantidad)){
+    alert("El total a pagar es: " + (precio1*pedirCantidad)+"€");
+    fruta1Cantidad=fruta1Cantidad-pedirCantidad;
+    alert("Quedan: " +fruta1Cantidad + " kilos de " + fruta1);
+}else {
+    alert("No hay suficiente cantidad");
+}
+
+if( (pedirFruta==fruta2) && (pedirCantidad<=fruta2Cantidad)){
+    alert("El total a pagar es: " + (precio2*pedirCantidad)+"€");
+    fruta2Cantidad=fruta2Cantidad-pedirCantidad;
+    alert("Quedan: " +fruta2Cantidad + " kilos de " + fruta2);
+}else {
+    alert("No hay suficiente cantidad");
+}
+
+if( (pedirFruta==fruta3) && (pedirCantidad<=fruta3Cantidad)){
+    alert("El total a pagar es: " + (precio3*pedirCantidad)+"€");
+    fruta3Cantidad=fruta3Cantidad-pedirCantidad;
+    alert("Quedan: " +fruta3Cantidad + " kilos de " + fruta3);
+}else {
+    alert("No hay suficiente cantidad");
+}
+
+    </script>
+</body>
+</html>
