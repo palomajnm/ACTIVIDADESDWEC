@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*Crea un script que pida el precio por noche de tres tipos de habitaciones: simples, dobes y suite. 
+Después se pide por teclado la cantidad de noches que va a dormir el cliente y el tipo de habitación.
+El programa calcula el precio total y lo muestra por pantalla.*/
+
+        let precioSimple = Number(prompt("Ingrese el precio por noche de la habitación simple: "));
+        let precioDoble = Number(prompt("Ingresa el precio por noche de la habitacion doble: "));
+        let precioSuite = Number(prompt("Ingresa el precio por noche de la habitacion suite: "));
+        let cantidadNoches = Number(prompt("Ingrese la cantidad de noches que va a dormir el cliente: "));
+        let tipoHabitacion = prompt("Ingrese el tipo de habitación (simple, doble, suite): ");
+        let precioTotal;
+
+        if(tipoHabitacion.toLowerCase()==="simple"){
+            precioTotal = precioSimple * cantidadNoches;
+        }else if(tipoHabitacion.toLowerCase()==="doble"){
+            precioTotal = precioDoble * cantidadNoches;
+        }else if(tipoHabitacion.toLowerCase()==="suite"){
+            precioTotal = precioSuite * cantidadNoches;
+        }else{
+            alert("Dato no valido");
+        }
+
+        alert("El precio total es: " + precioTotal);
+
+    </script>
+</body>
+</html>
